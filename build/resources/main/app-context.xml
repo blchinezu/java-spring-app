@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="messageProvider" class="com.spring.gameloft.configuration.impl.HelloGameloftMessageProvider"/>
+    <bean id="renderer"
+        class="com.spring.gameloft.configuration.impl.StandardOutMessageRenderer"
+        c:messageProvider-ref="messageProvider"
+    >
+    </bean>
+</beans>
