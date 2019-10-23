@@ -9,7 +9,7 @@ public class TestSingleton {
         SingletonComponent bean = ctx.getBean(SingletonComponent.class);
         SingletonComponent bean1 = (SingletonComponent) ctx.getBean("singletonComponent");
 
-        System.out.println("Thease beans are equal: " + (bean == bean1));
+        System.out.println("These beans are equal: " + (bean == bean1));
         System.out.println(bean.hashCode());
         System.out.println(bean1.hashCode());
 
