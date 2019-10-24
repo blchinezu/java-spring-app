@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -56,5 +57,10 @@ public class SingerController {
     public Singer update(@PathVariable("id") Long id, @RequestBody Singer singer) {
         System.out.println("Creating singer: " + singer);
         return singerService.update(id, singer);
+    }
+
+    @ExceptionHandler(value = RuntimeException.class)
+    public void notFound(HttpServletResponse response) {
+        response.setStatus(HttpStatus.NOT_FOUND.value());
     }
 }
