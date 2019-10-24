@@ -46,14 +46,16 @@ public class WebConfig implements WebMvcConfigurer {
         return mapper;
     }
 
+//    @Bean
+//    public StandardServletMultipartResolver multipartResolver() {
+//        StandardServletMultipartResolver resolver = new StandardServletMultipartResolver();
+//        return resolver;
+//    }
+
     @Bean
-    public StandardServletMultipartResolver multipartResolver() {
-        StandardServletMultipartResolver resolver = new StandardServletMultipartResolver();
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+        resolver.setMaxUploadSize(100000);
         return resolver;
     }
-
-//    @Bean
-//    public CommonsMultipartResolver multipartResolver() {
-//        return new CommonsMultipartResolver();
-//    }
 }
