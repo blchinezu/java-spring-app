@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ade436-5a3b-480f-a05b-6ca20f0b538d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../boot/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/BootApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/FileUploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/SingerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/domain/Singer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/SingerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/SingerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/test/java/com/spring/gameloft/BootApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/AlbumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/domain/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/AlbumRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/AlbumRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/AlbumService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/AlbumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -284,7 +275,7 @@
       <workItem from="1571920861683" duration="935000" />
       <workItem from="1571921984276" duration="4383000" />
       <workItem from="1571927242590" duration="3359000" />
-      <workItem from="1571987321559" duration="5895000" />
+      <workItem from="1571987321559" duration="7588000" />
     </task>
     <servers />
   </component>

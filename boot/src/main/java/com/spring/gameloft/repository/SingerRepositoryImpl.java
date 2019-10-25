@@ -48,7 +48,7 @@ public class SingerRepositoryImpl implements SingerRepository {
 
     @Override
     public Singer update(Long id, Singer singer) {
-        jdbcTemplate.update(insertSingerSql,
+        jdbcTemplate.update(updateSingerSql,
                 singer.getFirstName(),
                 singer.getLastName(),
                 singer.getBirthDate(),
