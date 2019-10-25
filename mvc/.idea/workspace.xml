@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ade436-5a3b-480f-a05b-6ca20f0b538d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/ApplicationProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/AlbumController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/domain/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/AlbumRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/AlbumRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/AlbumService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/service/AlbumServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/repository/SingerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/src/main/java/com/spring/gameloft/controller/AlbumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -276,6 +271,7 @@
       <workItem from="1571921984276" duration="4383000" />
       <workItem from="1571927242590" duration="3359000" />
       <workItem from="1571987321559" duration="7588000" />
+      <workItem from="1572007802235" duration="22000" />
     </task>
     <servers />
   </component>
@@ -287,7 +283,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

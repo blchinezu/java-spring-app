@@ -4,8 +4,11 @@ import com.spring.gameloft.domain.Singer;
 import com.spring.gameloft.service.SingerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
@@ -23,6 +26,9 @@ public class SingerController {
 //        return allSingers;
 //    }
 
+    @PreAuthorize("hasRole('USER') OR hasRole('ADMIN')")
+//    @Secured("ROLE_USER")
+//    @RolesAllowed(value = {"ADMIN", "USER"})
     @GetMapping("/{id}")
     public Singer getSinger(@PathVariable Long id) {
         Singer singer = singerService.getSinger(id);

@@ -58,8 +58,8 @@ public class AlbumController {
         return albumService.update(singerId, id, album);
     }
 
-    @ExceptionHandler(value = RuntimeException.class)
-    public void notFound(HttpServletResponse response) {
-        response.setStatus(HttpStatus.NOT_FOUND.value());
-    }
+//    @ExceptionHandler(value = RuntimeException.class)
+//    public void notFound(HttpServletResponse response) {
+//        response.setStatus(HttpStatus.NOT_FOUND.value());
+//    }
 }
