@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
+import javax.validation.ValidationException;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -53,20 +56,20 @@ public class SingerController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public Singer create(@RequestBody Singer singer) {
+    public Singer create(@Valid @RequestBody Singer singer) {
         System.out.println("Creating singer: " + singer);
         return singerService.create(singer);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Singer update(@PathVariable("id") Long id, @RequestBody Singer singer) {
+    public Singer update(@PathVariable("id") Long id, @Valid @RequestBody Singer singer) {
         System.out.println("Creating singer: " + singer);
         return singerService.update(id, singer);
     }
 
-    @ExceptionHandler(value = RuntimeException.class)
-    public void notFound(HttpServletResponse response) {
-        response.setStatus(HttpStatus.NOT_FOUND.value());
+    @ExceptionHandler(value = ValidationException.class)
+    public void badRequest(HttpServletResponse response) throws IOException {
+        response.setStatus(HttpStatus.BAD_REQUEST.value());
     }
 }
