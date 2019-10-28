@@ -21,7 +21,7 @@ public class AlbumController {
     private AlbumService albumService;
 
     @GetMapping("/{id}")
-    public Album getAlbum(@PathVariable Long singerId, @PathVariable Long id) {
+    public Album getAlbum(@PathVariable Long singerId, @PathVariable Integer id) {
         Album album = albumService.getAlbum(singerId, id);
         System.out.println("Getting album: " + id);
         return album;
@@ -29,7 +29,7 @@ public class AlbumController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteAlbum(@PathVariable Long singerId, @PathVariable Long id) {
+    public void deleteAlbum(@PathVariable Long singerId, @PathVariable Integer id) {
         Album album = albumService.getAlbum(singerId, id);
         System.out.println("Deleting album: " + album);
         albumService.delete(singerId, id);
@@ -53,7 +53,7 @@ public class AlbumController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Album update(@PathVariable Long singerId, @PathVariable Long id, @RequestBody Album album) {
+    public Album update(@PathVariable Long singerId, @PathVariable Integer id, @RequestBody Album album) {
         System.out.println("Creating album: " + album);
         return albumService.update(singerId, id, album);
     }

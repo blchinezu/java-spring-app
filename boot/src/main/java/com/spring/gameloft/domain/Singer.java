@@ -6,18 +6,23 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.*;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
-@ToString
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
-public class Singer {
+public class Singer implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
@@ -31,35 +36,16 @@ public class Singer {
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate birthDate;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @OneToMany(mappedBy = "singer", fetch = FetchType.EAGER)
+    private List<Album> albums;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
+    @Override
+    public String toString() {
+        return "Singer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
     }
 }

@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Repository
-public class SingerRepositoryImpl implements SingerRepository {
+public class SingerRepositoryJDBCImpl implements SingerRepositoryJDBC {
     private String getSingersSql = "SELECT * FROM singer";
 
     private String getSingerSql = "SELECT * FROM singer WHERE id = ?";

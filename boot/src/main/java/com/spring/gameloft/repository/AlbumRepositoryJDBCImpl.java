@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Repository
-public class AlbumRepositoryImpl implements AlbumRepository {
+public class AlbumRepositoryJDBCImpl implements AlbumRepositoryJDBC {
     private String getAlbumsSql = "SELECT * FROM album where singer_id = ?";
 
     private String getAlbumSql = "SELECT * FROM album WHERE id = ? and singer_id = ?";
@@ -31,7 +31,7 @@ public class AlbumRepositoryImpl implements AlbumRepository {
     }
 
     @Override
-    public Album getAlbum(Long singerId, Long id) {
+    public Album getAlbum(Long singerId, Integer id) {
         return jdbcTemplate.queryForObject(getAlbumSql, buildAlbumRowMapper(), id, singerId);
     }
 
@@ -46,7 +46,7 @@ public class AlbumRepositoryImpl implements AlbumRepository {
     }
 
     @Override
-    public Album update(Long singerId, Long id, Album album) {
+    public Album update(Long singerId, Integer id, Album album) {
         jdbcTemplate.update(updateAlbumSql,
                 album.getSingerId(),
                 album.getTitle(),
@@ -67,14 +67,14 @@ public class AlbumRepositoryImpl implements AlbumRepository {
     }
 
     @Override
-    public void delete(Long singerId, Long id) {
+    public void delete(Long singerId, Integer id) {
         jdbcTemplate.update(deleteAlbumSql, id, singerId);
     }
 
     private RowMapper<Album> buildAlbumRowMapper() {
         return (ResultSet rs, int rowNum) -> {
             Album album = new Album();
-            album.setId(rs.getLong("ID"));
+            album.setId(rs.getInt("ID"));
             album.setSingerId(rs.getLong("SINGER_ID"));
             album.setTitle(rs.getString("Title"));
             album.setReleaseDate(rs.getDate("RELEASE_DATE").toLocalDate());

@@ -1,56 +1,47 @@
 package com.spring.gameloft.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.*;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
-@ToString
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
 public class Album {
-    private Long id;
-    private Long singerId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    @JsonIgnore
+//    @JoinColumn(name = "singer_id")
+    private Singer singer;
+
     private String title;
+
+    @Transient
+    private Long singerId;
+
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate releaseDate;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSingerId() {
-        return singerId;
-    }
-
-    public void setSingerId(Long singerId) {
-        this.singerId = singerId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public LocalDate getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", releaseDate=" + releaseDate +
+                '}';
     }
 }

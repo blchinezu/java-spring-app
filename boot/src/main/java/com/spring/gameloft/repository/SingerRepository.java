@@ -1,20 +1,13 @@
 package com.spring.gameloft.repository;
 
 import com.spring.gameloft.domain.Singer;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface SingerRepository {
+public interface SingerRepository extends JpaRepository<Singer, Long> {
 
-    List<Singer> getAllSingers();
+//    Singer findFirstByLastName(String lastName);
 
-    Singer getSinger(Long id);
-
-    Singer create(Singer singer);
-
-    Singer update(Long id, Singer singer);
-
-    List<Singer> getSingersByName(String lastName);
-
-    void delete(Long id);
+    List<Singer> findAllByLastName(String lastName);
 }
