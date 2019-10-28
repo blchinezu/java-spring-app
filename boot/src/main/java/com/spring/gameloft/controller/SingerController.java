@@ -49,6 +49,9 @@ public class SingerController {
 
     @GetMapping
     public List<Singer> getSingerByLastName(@PathVariable(value = "lastName", required = false) String lastName) {
+        if (lastName == null) {
+            return singerService.getAllSingers();
+        }
         List<Singer> singers = singerService.getSingersByName(lastName);
         System.out.println("Getting singer: " + lastName);
         return singers;
