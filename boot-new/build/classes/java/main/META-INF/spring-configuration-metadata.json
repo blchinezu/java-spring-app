@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "com.gameloft",
+      "type": "com.spring.gameloft.ApplicationProperties",
+      "sourceType": "com.spring.gameloft.ApplicationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.gameloft.company-id",
+      "type": "java.lang.String",
+      "sourceType": "com.spring.gameloft.ApplicationProperties"
+    },
+    {
+      "name": "com.gameloft.employees-number",
+      "type": "java.lang.Integer",
+      "sourceType": "com.spring.gameloft.ApplicationProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

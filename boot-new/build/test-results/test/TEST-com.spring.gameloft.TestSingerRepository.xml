@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spring.gameloft.TestSingerRepository" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-29T13:38:43" hostname="c3e6ad2e5fb4" time="0.254">
+  <properties/>
+  <testcase name="testGetByFirstName" classname="com.spring.gameloft.TestSingerRepository" time="0.219"/>
+  <testcase name="testGetAllWithNativeQuery" classname="com.spring.gameloft.TestSingerRepository" time="0.033"/>
+  <system-out><![CDATA[15:38:39.629 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.spring.gameloft.TestSingerRepository]
+15:38:39.629 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.spring.gameloft.TestSingerRepository]
+15:38:39.630 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.spring.gameloft.TestSingerRepository]
+15:38:39.630 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.spring.gameloft.TestSingerRepository]
+15:38:39.634 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [true] with mode [AFTER_CLASS].
+15:38:39.636 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.spring.gameloft.TestSingerRepository]
+15:38:39.637 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.spring.gameloft.TestSingerRepository]
+15:38:39.640 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = com.spring.gameloft.TestSingerRepository@14b30a75, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+15:38:39.739 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-10-29 15:38:40.031  INFO 1922 --- [    Test worker] c.spring.gameloft.TestSingerRepository   : Starting TestSingerRepository on c3e6ad2e5fb4 with PID 1922 (started by gabi in /home/gabi/Projects/boot-new)
+2019-10-29 15:38:40.032  INFO 1922 --- [    Test worker] c.spring.gameloft.TestSingerRepository   : The following profiles are active: test
+2019-10-29 15:38:40.498  INFO 1922 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-29 15:38:40.567  INFO 1922 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 1 repository interfaces.
+2019-10-29 15:38:40.619  INFO 1922 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2019-10-29 15:38:40.810  INFO 1922 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:9b6ccb41-516a-4a9c-b9b1-42ee3bcc14ff;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-10-29 15:38:41.160  INFO 1922 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-29 15:38:41.217  INFO 1922 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-29 15:38:41.345  INFO 1922 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-29 15:38:41.455  INFO 1922 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table address if exists
+Hibernate: 
+    
+    drop table album if exists
+Hibernate: 
+    
+    drop table department if exists
+Hibernate: 
+    
+    drop table employee if exists
+Hibernate: 
+    
+    drop table phone if exists
+Hibernate: 
+    
+    drop table project if exists
+Hibernate: 
+    
+    drop table project_employee if exists
+Hibernate: 
+    
+    drop table singer if exists
+Hibernate: 
+    
+    create table address (
+       id integer not null,
+        city varchar(255),
+        state varchar(255),
+        street varchar(255),
+        zip varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table album (
+       id bigint generated by default as identity,
+        release_date date,
+        title varchar(255),
+        singer_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table department (
+       id integer not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table employee (
+       id integer not null,
+        name varchar(255),
+        salary bigint not null,
+        startdate date,
+        address_id integer,
+        department_id integer,
+        manager_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table phone (
+       id bigint not null,
+        number varchar(255),
+        type varchar(255),
+        employee_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table project (
+       dtype varchar(31) not null,
+        id integer not null,
+        name varchar(255),
+        qa_rating integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table project_employee (
+       projects_id integer not null,
+        employees_id integer not null
+    )
+Hibernate: 
+    
+    create table singer (
+       id bigint generated by default as identity,
+        birth_date date,
+        first_name varchar(255) not null,
+        last_name varchar(10),
+        primary key (id)
+    )
+Hibernate: 
+    
+    alter table album 
+       add constraint FK1imrvvcsp892ggu1tlcbhavjm 
+       foreign key (singer_id) 
+       references singer
+Hibernate: 
+    
+    alter table employee 
+       add constraint FKga73hdtpb67twlr9c1i337tyt 
+       foreign key (address_id) 
+       references address
+Hibernate: 
+    
+    alter table employee 
+       add constraint FKbejtwvg9bxus2mffsm3swj3u9 
+       foreign key (department_id) 
+       references department
+Hibernate: 
+    
+    alter table employee 
+       add constraint FKou6wbxug1d0qf9mabut3xqblo 
+       foreign key (manager_id) 
+       references employee
+Hibernate: 
+    
+    alter table phone 
+       add constraint FK7o163ud48yuxre1c786jwh8nv 
+       foreign key (employee_id) 
+       references employee
+Hibernate: 
+    
+    alter table project_employee 
+       add constraint FK7jvwbetjt8ibwomi5scx143qf 
+       foreign key (employees_id) 
+       references employee
+Hibernate: 
+    
+    alter table project_employee 
+       add constraint FKo8tuufttvxdkddrgq026nvhte 
+       foreign key (projects_id) 
+       references project
+2019-10-29 15:38:42.542  INFO 1922 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-29 15:38:42.549  INFO 1922 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-29 15:38:43.170  INFO 1922 --- [    Test worker] c.spring.gameloft.TestSingerRepository   : Started TestSingerRepository in 3.427 seconds (JVM running for 4.659)
+2019-10-29 15:38:43.191  INFO 1922 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = com.spring.gameloft.TestSingerRepository@14b30a75, testMethod = testGetByFirstName@TestSingerRepository, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@204f555c]; rollback [true]
+Hibernate: 
+    insert 
+    into
+        singer
+        (id, birth_date, first_name, last_name) 
+    values
+        (null, ?, ?, ?)
+Hibernate: 
+    select
+        singer0_.id as id1_7_,
+        singer0_.birth_date as birth_da2_7_,
+        singer0_.first_name as first_na3_7_,
+        singer0_.last_name as last_nam4_7_ 
+    from
+        singer singer0_ 
+    where
+        singer0_.last_name=?
+2019-10-29 15:38:43.396  INFO 1922 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = com.spring.gameloft.TestSingerRepository@14b30a75, testMethod = testGetByFirstName@TestSingerRepository, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-10-29 15:38:43.404  INFO 1922 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = com.spring.gameloft.TestSingerRepository@32b3f432, testMethod = testGetAllWithNativeQuery@TestSingerRepository, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@204f555c]; rollback [true]
+Hibernate: 
+    insert 
+    into
+        singer
+        (id, birth_date, first_name, last_name) 
+    values
+        (null, ?, ?, ?)
+Hibernate: 
+    select
+        * 
+    from
+        singer
+2019-10-29 15:38:43.434  INFO 1922 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1bfd8017 testClass = TestSingerRepository, testInstance = com.spring.gameloft.TestSingerRepository@32b3f432, testMethod = testGetAllWithNativeQuery@TestSingerRepository, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@37a67004 testClass = TestSingerRepository, locations = '{}', classes = '{class com.spring.gameloft.BootApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@432b6f09, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@66263c41, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5994cc87, [ImportsContextCustomizer@3338f60b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7512ca26, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70362d0d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-10-29 15:38:43.438  INFO 1922 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

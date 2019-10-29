@@ -6,6 +6,8 @@ import com.spring.gameloft.repository.SingerRepositoryJDBC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -29,8 +31,11 @@ public class SingerServiceImpl implements SingerService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public Singer getSinger(Long id) {
-        return singerRepository.getOne(id);
+        Singer oneSinger = singerRepository.getOne(id);
+        oneSinger.setFirstName("Mister");
+        return oneSinger;
     }
 
     @Override
